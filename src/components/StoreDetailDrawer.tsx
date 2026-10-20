@@ -85,8 +85,16 @@ export const StoreDetailDrawer: React.FC<StoreDetailDrawerProps> = ({
                   {store.tier === 'strong' ? 'Top Tier' : store.tier === 'weak' ? 'Low Tier' : 'Mid Tier'}
                 </span>
               </div>
-              <p className="text-xs text-slate-500 font-medium">
-                {store.city}, {store.state} · {storeVisits.length} scans recorded
+              <p className="text-xs text-slate-500 font-medium flex items-center gap-1.5 flex-wrap">
+                <span>{store.city}, {store.state}</span>
+                {store.manager && (
+                  <>
+                    <span>·</span>
+                    <span className="text-slate-800 font-bold">Branch Mgr: {store.manager}</span>
+                  </>
+                )}
+                <span>·</span>
+                <span>{storeVisits.length} scans recorded</span>
               </p>
             </div>
           </div>

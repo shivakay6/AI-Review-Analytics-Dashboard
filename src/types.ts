@@ -1,6 +1,7 @@
 export type Visit = {
   id: string;
   storeName: string;
+  manager?: string;
   city: string;
   state: string;
   scannedAt: Date;
@@ -22,6 +23,7 @@ export type StoreInfo = {
   city: string;
   state: string;
   tier: 'strong' | 'medium' | 'weak';
+  manager: string;
 };
 
 export type DateRangePreset =
@@ -39,7 +41,8 @@ export type TabType =
   | 'dropoffs'
   | 'positive'
   | 'negative'
-  | 'stores';
+  | 'stores'
+  | 'managers';
 
 export type MetricSummary = {
   s: number;         // QR Scans

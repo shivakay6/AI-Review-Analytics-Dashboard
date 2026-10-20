@@ -21,6 +21,7 @@ export const TabBar: React.FC<TabBarProps> = ({
     { id: 'positive', label: 'Positive Reviews' },
     { id: 'negative', label: 'Negative Feedback' },
     { id: 'stores', label: 'Store Performance' },
+    { id: 'managers', label: 'Manager Performance' },
   ];
 
   return (

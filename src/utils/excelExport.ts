@@ -48,6 +48,7 @@ export function exportVisitsToExcel(
         : '';
 
     return {
+      'Branch Manager': v.manager || '',
       'Store Name': v.storeName,
       'scanned_at_ist': formatIST(v.scannedAt),
       'Month': month,
@@ -67,6 +68,7 @@ export function exportVisitsToExcel(
 
   const worksheet = XLSX.utils.json_to_sheet(rows, {
     header: [
+      'Branch Manager',
       'Store Name',
       'scanned_at_ist',
       'Month',
@@ -86,6 +88,7 @@ export function exportVisitsToExcel(
 
   // Adjust column widths for readability
   worksheet['!cols'] = [
+    { wch: 22 }, // Branch Manager
     { wch: 28 }, // Store Name
     { wch: 18 }, // scanned_at_ist
     { wch: 12 }, // Month

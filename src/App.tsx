@@ -8,6 +8,7 @@ import { FunnelDropoffsTab } from './components/FunnelDropoffsTab';
 import { PositiveReviewsTab } from './components/PositiveReviewsTab';
 import { NegativeFeedbackTab } from './components/NegativeFeedbackTab';
 import { StorePerformanceTab } from './components/StorePerformanceTab';
+import { ManagerPerformanceTab } from './components/ManagerPerformanceTab';
 import { ResponsesDrawer } from './components/ResponsesDrawer';
 import { ALL_VISITS, STORES } from './mockData';
 import { computeMetrics } from './metrics';
@@ -298,6 +299,16 @@ export default function App() {
               {/* Tab 5: Store Performance */}
               {activeTab === 'stores' && (
                 <StorePerformanceTab
+                  stores={STORES}
+                  currentVisits={currentVisits}
+                  prevVisits={prevVisits}
+                  comparisonMode={comparisonMode}
+                />
+              )}
+
+              {/* Tab 6: Manager Performance */}
+              {activeTab === 'managers' && (
+                <ManagerPerformanceTab
                   stores={STORES}
                   currentVisits={currentVisits}
                   prevVisits={prevVisits}
