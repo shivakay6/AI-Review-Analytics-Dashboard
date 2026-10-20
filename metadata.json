@@ -1,0 +1,8 @@
+{
+  "name": "Review Analytics",
+  "description": "Centralized performance tracking across all outlets for QR-based AI Rich Review Generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
